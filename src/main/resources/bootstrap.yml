@@ -4,10 +4,15 @@ spring:
   cloud:
     config:
       uri:
-        - http://localhost:8888
+        - http://localhost:8889
   profiles:
     active:
       - dev
 server:
-  port: 8080
+  port: 8082
+
+eureka:
+  client:
+    service-url.defaultZone: http://10.62.42.94:8761/eureka
+  instance.prefer-ip-address: true
 
